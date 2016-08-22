@@ -1,3 +1,25 @@
+body {
+	background-color: whitesmoke;
+}
+
+.container {
+	background-color: white;
+}
+
 h1, h2, h3, h4, h5, h6 {
 	font-weight: 300;
+	color: #616161;
+}
+
+p {
+	color: #757575;
+}
+
+a {
+	color: inherit;
+	/*removes default bule color of the anchor tag*/
+}
+
+#socialMediaButtons {
+	padding: 2rem;
 }

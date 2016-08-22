@@ -8,15 +8,15 @@ var content_connect_with_me =
     "I'm there everywhere.";
 
 $("#AboutMeContent").text(content_about_me);
-$("#ConnectWithMeContent").text(content_connect_with_me);//--Add content
+$("#ConnectWithMeContent").text(content_connect_with_me);
 
 //Add waves effect to collapsible-header
-$(".collapsible-header").addClass("waves-effect waves-teal");//--Add waves effect to collapsible-header
+$(".collapsible-header").addClass("waves-effect waves-teal");
 
 //Disable mouse right click
 document.oncontextmenu = function () {
     return false;
-};//--Disable mouse right click
+};
 
 //Dis able keyboard keys crtl+u and ctrl+shift+i
 document.onkeydown = function (e) {
@@ -25,4 +25,4 @@ document.onkeydown = function (e) {
     } else {
         return true;
     }
-};//--Dis able keyboard keys crtl+u and ctrl+shift+i
+};

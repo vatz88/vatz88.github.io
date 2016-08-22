@@ -1,14 +1,16 @@
 //Add content
 var content_about_me =
 
-    "I'm VaTz88. Engg stud at VIT.";
+    "Engineering student at VIT University, Vellore campus.\
+    Technology enthusiast and love coding.";
 
 var content_connect_with_me =
 
-    "I'm there everywhere.";
+    "I'm here!";
 
 $("#AboutMeContent").text(content_about_me);
-$("#ConnectWithMeContent").text(content_connect_with_me);
+//$("#ConnectWithMeContent").text(content_connect_with_me);
+$("#ConnectWithMeContent").hide();
 
 //Add waves effect to collapsible-header
 $(".collapsible-header").addClass("waves-effect waves-teal");

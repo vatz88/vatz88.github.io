@@ -53,11 +53,13 @@
 		<div class="card-panel z-depth-2">
 			<div class="row">
 				<div class="col s12 m12 l6">
-					<center><img itemprop="image" class="circle responsive-img" width="150" src="https://raw.githubusercontent.com/VaTz88/VzWebsite/master/Vatsal%20Joshi.jpg?token=APc6U_v4DBrlqh-zYmVFDAU5q4oOUAGRks5XxAu_wA%3D%3D"
-							alt="Vatsal Joshi (VaTz88)"></center>
+					<span><img itemprop="image" class="positionImgCenter circle responsive-img" width="150" src="https://raw.githubusercontent.com/VaTz88/VzWebsite/master/Vatsal%20Joshi.jpg?token=APc6U_v4DBrlqh-zYmVFDAU5q4oOUAGRks5XxAu_wA%3D%3D"
+							alt="Vatsal Joshi (VaTz88)"></span>
 				</div>
 				<div class="col s12 m12 l6">
-					<h2 class="center-align"><span itemprop="givenName">Vatsal</span> <span itemprop="familyName">Joshi</span><span itemprop="alternateName" style="display:none;">VaTz88</span></h2>
+					<div>
+						<h2 class="center-align"><span itemprop="name">Vatsal Joshi</span><span itemprop="alternateName" style="display:none;">VaTz88</span></h2>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -66,11 +68,28 @@
 		<div class="z-depth-2">
 			<ul class="collapsible" data-collapsible="accordion">
 				<li>
-					<div class="collapsible-header">
+					<div class="collapsible-header active">
 						<h4>About me</h4>
 					</div>
 					<div class="collapsible-body">
 						<p id="AboutMeContent" class="flow-text">%ContentAboutMe%</p>
+						<div id="resumeButtonAndText">
+							<button data-target="resume" class="btn modal-trigger">Résumé</button>
+							<span class="flow-text" style="margin-left: 0.5%; margin-right: 0.5%;">or see on</span>
+							<a href="https://www.linkedin.com/in/vatz88"><i class="mdi mdi-36px mdi-dark mdi-linkedin" aria-hidden="true"></i></a>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="collapsible-header">
+						<h4>Projects and works</h4>
+					</div>
+					<div class="collapsible-body">
+						<p class="flow-text">
+							<a href="http://ffcsonthego.azurewebsites.net" target="_blank">FFCSonTheGo!</a>
+							<span>a website for the use of VITians to make FFCS course registrations hassle free.</span><br><br>
+							<span>See more on </span><a href="https://github.com/vatz88"><i class="mdi mdi-36px mdi-dark mdi-github-circle" aria-hidden="true"></i></a>
+						</p>
 					</div>
 				</li>
 				<li>
@@ -79,6 +98,7 @@
 					</div>
 					<div class="collapsible-body">
 						<p id="ConnectWithMeContent" class="flow-text">%ContentConnectWithMe%</p>
+						<p class="flow-text">On social networks</p>
 						<div class="row" id="socialMediaButtons">
 							<span class="col m1 l1"><a href="https://www.facebook.com/VaTz88"><i class="mdi mdi-36px mdi-dark mdi-facebook" aria-hidden="true"></i></a></span>
 							<span class="col m1 l1"><a href="https://twitter.com/vatz88"><i class="mdi mdi-36px mdi-dark mdi-twitter" aria-hidden="true"></i></a></span>
@@ -87,6 +107,9 @@
 							<span class="col m1 l1"><a href="https://www.snapchat.com/add/VaTz88"><i class="mdi mdi-36px mdi-dark mdi-snapchat" aria-hidden="true"></i></a></span>
 							<span class="col m1 l1"><a href="https://www.linkedin.com/in/vatz88"><i class="mdi mdi-36px mdi-dark mdi-linkedin" aria-hidden="true"></i></a></span>
 							<span class="col m1 l1"><a href="https://github.com/vatz88"><i class="mdi mdi-36px mdi-dark mdi-github-circle" aria-hidden="true"></i></a></span>
+						</div>
+						<p class="flow-text">Mail or give a phone call</p>
+						<div class="row" id="mailORcallButtons">
 							<span class="col m1 l1"><a href="mailto:vatz88@gmail.com"><i class="mdi mdi-36px mdi-dark mdi-email" aria-hidden="true"></i></a></span>
 							<span class="col m1 l1"><a href="tel:00919943178881"><i class="mdi mdi-36px mdi-dark mdi-phone" aria-hidden="true"></i></a></span>
 						</div>
@@ -97,6 +120,20 @@
 		</div>
 
 	</div>
+
+	<!-- Resume modal Structure -->
+	<div id="resume" class="modal modal-fixed-footer">
+		<div class="modal-content">
+			<h4>Modal Header</h4>
+			<p>A bunch of text</p>
+		</div>
+		<div class="modal-footer">
+			<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Close</a>
+			<a href="#!" class="modal-action waves-effect waves-green btn-flat ">Download</a>
+		</div>
+	</div>
+	<!--modal-->
+
 	<!--container-->
 
 	<!--jquery.min.js-->

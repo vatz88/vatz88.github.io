@@ -15,6 +15,11 @@ $("#ConnectWithMeContent").hide();
 //Add waves effect to collapsible-header
 $(".collapsible-header").addClass("waves-effect waves-teal");
 
+//Trigger modal
+$(document).ready(function () {
+    $('.modal-trigger').leanModal();
+});
+
 //Disable mouse right click
 document.oncontextmenu = function () {
     return false;

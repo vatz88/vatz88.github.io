@@ -1,9 +1,11 @@
 body {
-	background-color: whitesmoke;
+	/*#F5F5F5 whitesmoke*/
+	background-color: #F5F5F5;
 }
 
 .container {
-	background-color: white;
+	/*#F5F5F5 white*/
+	background-color: #FFFFFF;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -15,16 +17,17 @@ p, .flow-text {
 	color: #757575;
 }
 
-
-/*a {
-	color: inherit;
-	removes default bule color of the anchor tag
-}*/
-
-#socialMediaButtons, #resumeButtonAndText, #mailORcallButtons {
+#resumeButtonAndText, #resumeButtonAndText, #mailORcallButtons {
 	padding-left: 2rem;
+	padding-right: 2rem;
 	padding-bottom: 2rem;
-	padding-top: 2rem;
+	margin: 0%;
+}
+
+#socialMediaButtons {
+	padding-left: 2rem;
+	padding-right: 2rem;
+	margin: 0%;
 }
 
 .positionImgCenter {

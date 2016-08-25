@@ -18,6 +18,12 @@ $(".collapsible-header").addClass("waves-effect waves-teal");
 //Trigger modal
 $(document).ready(function () {
     $('.modal-trigger').leanModal();
+
+    //Triger modal directly from link with #resume
+    if (window.location.href.indexOf('#resume') != -1) {
+        $('#resume').openModal();
+    }
+
 });
 
 //Disable mouse right click

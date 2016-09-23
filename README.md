@@ -1,2 +1,1 @@
-# VzWebsite
-My personal website
+# My personal website

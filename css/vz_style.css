@@ -1,5 +1,7 @@
 body {
     background-color: #f5f5f5;
+    color: #757575;
+    cursor: default;
 }
 
 .myCard {
@@ -81,10 +83,6 @@ h6 {
 
 #resume blockquote {
     color: #757575;
-}
-
-#followButtonRow {
-    text-align: center;
 }
 
 @media only screen and (max-width:768px) {

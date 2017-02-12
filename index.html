@@ -72,9 +72,9 @@
                     </div>
                     <div class="collapsible-body">
                         <p id="AboutMeContent">Engineering student at VIT University, Vellore campus. Technology enthusiast and love coding.</p>
-                        <div id="resumeButtonAndText" class="hide"><button class="btn modal-trigger" title="See résumé" data-target=resume>Résumé</button>
+                        <div id="resumeButtonAndText" class="hide"><a href="#resume" class="waves-effect waves-light btn" title="See résumé">Résumé</a>
                             <span style="margin-left:0.5%;margin-right:0.5%">or see on</span>
-                            <a href="https://www.linkedin.com/in/vatz88" title=LinkedIn><i aria-hidden="true" class="mdi mdi-dark mdi-24px mdi-linkedin"></i></a>
+                            <a class="tooltipped" href="https://www.linkedin.com/in/vatz88" data-tooltip="LinkedIn" data-position="top" data-delay="25"><img src="media/linkedin.png" alt="LinkedIn"></a>
                         </div>
                     </div>
                 </li>
@@ -246,9 +246,11 @@
             </div>
         </div>
         <!-- modal-content -->
-        <div class="modal-footer"><button class="btn-flat modal-action waves-effect waves-green modal-close" title="Close"><i aria-hidden="true" class="mdi mdi-dark mdi-close"></i></button>
-            <a href="https://docs.google.com/document/d/1vR4zU0g_ZmY6zMgCF3VGejAs9n4meObesinS0yE3zis/export?format=pdf" title="Download résumé"
-                class="btn-flat modal-action waves-effect waves-green"><i aria-hidden="true" class="mdi mdi-dark mdi-download"></i></a>
+        <div class="modal-footer">
+            <button class="btn-flat modal-action waves-effect waves-green modal-close tooltipped" data-tooltip="Close" data-position="top"
+                data-delay="25"><img src="media/close.png" alt="close"></button>
+            <a href="https://docs.google.com/document/d/1vR4zU0g_ZmY6zMgCF3VGejAs9n4meObesinS0yE3zis/export?format=pdf" class="btn-flat modal-action waves-effect waves-green tooltipped"
+                data-tooltip="Save" data-position="top" data-delay="25"><img src="media/download.png" alt="download"></a>
         </div>
     </div>
     <!-- modal -->

@@ -1,11 +1,17 @@
 $(document).ready(function () {
-    $(".modal-trigger").leanModal();
+    $('.modal').modal();
     if (window.location.href.indexOf("#resume") != -1) {
-        $("#resume").openModal();
+        $("#resume").modal('open');
     }
     $(".collapsible-header").addClass("waves-effect waves-teal");
     $('a').attr("target", "_blank");
 });
+
+window.onhashchange = function locationHashChanged() {
+    if (location.hash === "#resume") {
+        $("#resume").modal('open');
+    }
+};
 
 document.oncontextmenu = function (e) {
     if (e.target.href) {

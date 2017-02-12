@@ -41,15 +41,9 @@ h6 {
 }
 
 #mailORcallButtons,
-#resumeButtonAndText {
-    padding-bottom: 2rem;
-}
-
-#mailORcallButtons,
 #resumeButtonAndText,
 #socialMediaButtons {
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-top: 0.5em;
     margin: 0;
 }
 

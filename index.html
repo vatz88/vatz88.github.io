@@ -6,10 +6,8 @@
     <title>Vatsal Joshi</title>
     <!-- redirect http to https -->
     <script type="text/javascript">
-        var x = window.location.href.split(":");
-        if (x[0] == "http") {
-            x[0] = "https";
-            window.location.href = x.join(":");
+        if (window.location.protocol != "https:") {
+            window.location.protocol = "https:";
         }
     </script>
     <meta content="width=device-width,initial-scale=1" name="viewport">

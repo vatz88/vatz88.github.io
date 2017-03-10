@@ -7,7 +7,7 @@ $(document).ready(function () {
     $('a').attr("target", "_blank");
 });
 
-window.onhashchange = function locationHashChanged() {
+window.onhashchange = function () {
     if (location.hash === "#resume") {
         $("#resume").modal('open');
     }
@@ -21,8 +21,8 @@ document.oncontextmenu = function (e) {
     }
 };
 
-document.onkeydown = function (b) {
-    if (b.ctrlKey && ((b.keyCode === 117 || b.keyCode === 85) || (b.shiftKey && (b.keyCode === 73 || b.keyCode === 105)))) {
+document.onkeydown = function (e) {
+    if (e.ctrlKey && ((e.keyCode === 117 || e.keyCode === 85) || (e.shiftKey && (e.keyCode === 73 || e.keyCode === 105)))) {
         return false;
     } else {
         return true;

@@ -1,5 +1,6 @@
 CACHE MANIFEST
 # 2017-04-08
+# v2
 
 https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css
 https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js
@@ -14,7 +15,7 @@ FALLBACK:
 CACHE:
 media/favicon.png
 media/icon_192x192.png
-media/apple-touch-icon.png
+media/apple-touch-icon_158x158.png
 media/image_300x300.png
 media/icon_1200x1200.png
 index.html

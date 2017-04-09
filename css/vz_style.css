@@ -21,6 +21,10 @@ main {
     padding: 0 1rem;
 }
 
+footer {
+    font-size: 1.2em;
+}
+
 footer a {
     color: #757575;
 }

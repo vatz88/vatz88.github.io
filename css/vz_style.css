@@ -2,10 +2,27 @@ body {
     background-color: #f5f5f5;
     color: #757575;
     cursor: default;
+    /* for footer */
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    /* for footer */
+    flex: 1 0 auto;
 }
 
 .myCard {
     background-color: #fff;
+}
+
+.myCardNoPadding {
+    padding: 0 1rem;
+}
+
+footer a {
+    color: #757575;
 }
 
 h1,

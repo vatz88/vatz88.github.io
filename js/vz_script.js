@@ -5,6 +5,18 @@ $(document).ready(function () {
     }
     $(".collapsible-header").addClass("waves-effect waves-teal");
     $('a').attr("target", "_blank");
+
+    // typed.js
+    $("#typedText").typed({
+        strings: ["Tech enthusiast.", "Enjoy coding.", "Swimming, football, etc.", "Stay connected!"],
+        typeSpeed: 0,
+        startDelay: 800,
+        showCursor: true,
+        cursorChar: " /",
+        backDelay: 1400,
+        loop: true
+
+    });
 });
 
 window.onhashchange = function () {

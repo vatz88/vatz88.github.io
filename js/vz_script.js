@@ -8,7 +8,7 @@ $(document).ready(function () {
 
     // typed.js
     $("#typedText").typed({
-        strings: ["Tech enthusiast.", "Enjoy coding.", "Swimming, football, etc.", "Stay connected!"],
+        strings: ["Tech enthusiast.", "Enjoy coding.", "Swimming, football, chess, etc.", "Stay connected!"],
         typeSpeed: 0,
         startDelay: 800,
         showCursor: true,

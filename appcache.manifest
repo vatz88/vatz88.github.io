@@ -1,10 +1,11 @@
 CACHE MANIFEST
 # 2017-04-18
-# v2
+# v3
 
 https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css
 https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js
 https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js
+https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.7/typed.min.js
 
 NETWORK:
 *
@@ -19,4 +20,6 @@ media/apple-touch-icon_158x158.png
 media/image_300x300.png
 media/icon_1200x1200.png
 media/VatsalJoshi.jpg
+js/vz_script.js
+css/vz_style.css
 index.html

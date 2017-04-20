@@ -5,11 +5,9 @@
     <meta charset=UTF-8>
     <title>Vatsal Joshi</title>
     <!-- redirect http to https -->
-    <script type="text/javascript">
-        var x = window.location.href.split(":");
-        if (x[0] == "http") {
-            x[0] = "https";
-            window.location.href = x.join(":");
+    <script>
+        if (window.location.protocol === "http:") {
+            window.location.protocol = "https";
         }
     </script>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -68,7 +66,7 @@
                                 <h3><span itemprop="name">Vatsal Joshi</span><span class="hide" itemprop="alternateName">VaTz88</span></h3>
                             </div>
                             <div class="s12 flow-text">
-                                < <span id="typedText"></span> >
+                                &#60; <span id="typedText"></span> &#62;
                             </div>
                         </div>
                     </div>

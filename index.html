@@ -6,7 +6,7 @@
     <title>Vatsal Joshi</title>
     <!-- redirect http to https -->
     <script>
-        if (window.location.protocol === "http:") {
+        if (window.location.protocol === "http:" && window.location.hostname !== "localhost") {
             window.location.protocol = "https";
         }
     </script>
@@ -55,7 +55,7 @@
 
         <div class="container">
 
-            <div class="hoverable myCard card-panel">
+            <div class="myCard card-panel">
                 <div class="row">
                     <div class="col m12 s12 l6">
                         <span><img id="profilePic" alt="Vatsal Joshi (VaTz88)" class="circle positionImgCenter responsive-img" itemprop="image" src="media/VatsalJoshi.jpg" title="Vatsal Joshi"></span>
@@ -73,7 +73,7 @@
                 </div>
             </div>
 
-            <div class="hoverable myCard">
+            <div class="myCard">
                 <ul class="collapsible" data-collapsible="accordion">
 
                     <li>
@@ -167,7 +167,7 @@
     </main>
 
     <footer class="container">
-        <div class="hoverable myCardNoPadding card-panel">
+        <div class="myCardNoPadding card-panel">
             <div class="row center">
                 <div class="col m5 hide-on-small-only">
                     <p>© 2017 Vatsal Joshi</p>

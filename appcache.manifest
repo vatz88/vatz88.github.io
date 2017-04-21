@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# 2017-04-19
+# 2017-04-21
 
 https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css
 https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js
@@ -16,8 +16,6 @@ CACHE:
 media/favicon.png
 media/icon_192x192.png
 media/apple-touch-icon_158x158.png
-media/image_300x300.png
-media/icon_1200x1200.png
 media/VatsalJoshi.jpg
 js/vz_script.js
 css/vz_style.css

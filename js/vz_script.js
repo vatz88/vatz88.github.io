@@ -59,6 +59,10 @@ if (!isTouchDevice) {
     var dh = $(document).height() / 2;
     var dw = $(document).width() / 2;
     var maxRotate = 20;
+    window.onresize = function (event) {
+        dh = $(document).height() / 2;
+        dw = $(document).width() / 2;
+    };
     $(document).mousemove(function (event) {
         var Xdeg = 90 - (event.pageY * 90) / dh;
         var Ydeg = -90 + (event.pageX * 90) / dw;

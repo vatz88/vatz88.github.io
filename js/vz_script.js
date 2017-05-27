@@ -1,3 +1,14 @@
+// Check for cache update
+function onUpdateReady() {
+    window.location.reload();
+}
+window.applicationCache.addEventListener('updateready', onUpdateReady);
+if (window.applicationCache.status === window.applicationCache.UPDATEREADY) {
+    onUpdateReady();
+}
+
+
+// Document ready
 $(document).ready(function () {
     $('.modal').modal();
     if (window.location.href.indexOf("#resume") != -1) {

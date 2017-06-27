@@ -7,7 +7,6 @@ if (window.applicationCache.status === window.applicationCache.UPDATEREADY) {
     onUpdateReady();
 }
 
-
 // Document ready
 $(document).ready(function () {
     $('.modal').modal();

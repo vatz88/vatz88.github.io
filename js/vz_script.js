@@ -1,10 +1,16 @@
 $(function () {
 	$('.modal').modal();
 	if ((window.location.hash).toLowerCase() === "#resume") {
+		if ($("#resume iframe").length === 0) {
+			$("#resume .modal-content").html('<iframe src="https://docs.google.com/viewer?srcid=1CLHIbKD52y6qHZ4Sp18MkSb3hWSHQM0Mg8bBWxw3Afw&pid=explorer&efh=false&a=v&chrome=false&embedded=true"></iframe>');
+		}
 		$("#resume").modal('open');
 	}
 	window.onhashchange = function () {
 		if ((location.hash).toLowerCase() === "#resume") {
+			if ($("#resume iframe").length === 0) {
+				$("#resume .modal-content").html('<iframe src="https://docs.google.com/viewer?srcid=1CLHIbKD52y6qHZ4Sp18MkSb3hWSHQM0Mg8bBWxw3Afw&pid=explorer&efh=false&a=v&chrome=false&embedded=true"></iframe>');
+			}
 			$("#resume").modal('open');
 		}
 	};

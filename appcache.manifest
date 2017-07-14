@@ -1,6 +1,5 @@
 CACHE MANIFEST
-# 2017-05-27
-# v2
+# 2017-07-14
 
 https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css
 https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js
@@ -14,10 +13,26 @@ FALLBACK:
 / /
 
 CACHE:
+js/vz_script.js
+css/vz_style.css
 media/favicon.png
 media/icon_192x192.png
 media/apple-touch-icon_158x158.png
 media/VatsalJoshi.jpg
-js/vz_script.js
-css/vz_style.css
+media/close.png
+media/download.png
+media/email.png
+media/facebook-messenger.png
+media/facebook.png
+media/github-circle.png
+media/google-plus.png
+media/hackerearth.png
+media/instagram.png
+media/linkedin.png
+media/open-in-new.png
+media/phone.png
+media/snapchat.png
+media/stackoverflow.png
+media/twitter.png
+media/whatsapp.png
 index.html

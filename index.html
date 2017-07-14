@@ -2,295 +2,201 @@
 <html lang="en" manifest="appcache.manifest">
 
 <head>
-    <meta charset=UTF-8>
-    <title>Vatsal Joshi</title>
-    <!-- redirect http to https -->
-    <script>
-        if (window.location.protocol === "http:" && window.location.hostname !== "localhost") {
-            window.location.protocol = "https";
-        }
-    </script>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <meta content="Know and connect with Vatsal Joshi" name="description" />
-    <meta content="Vatsal,Joshi,VaTz88,VaTz,Engineer,Coder,Developer,VIT,Vellore,Vadodara,India" name="keywords" />
-    <meta content="Vatsal Joshi" name="author">
-    <meta name="theme-color" content="#424242">
-    <link href="media/favicon.png" rel="shortcut icon">
-    <link rel="apple-touch-icon image_src" href="media/apple-touch-icon_158x158.png">
-    <link rel="icon" sizes="192x192" href="media/icon_192x192.png">
-    <!-- twitter card -->
-    <meta content="summary" name="twitter:card" />
-    <meta content=@VaTz88 name="twitter:site:id" />
-    <meta content="Vatsal Joshi" name="twitter:title" />
-    <meta content="Know and connect with Vatsal Joshi" name="twitter:description" />
-    <meta content="https://vatz88.in/media/image_300x300.png" name="twitter:image" />
-    <meta content="Vatsal Joshi" name="twitter:image:alt" />
-    <!-- og tags -->
-    <meta content="Vatsal Joshi" property="og:title" />
-    <meta content="website" property="og:type">
-    <meta content="https://vatz88.in/" property="og:url">
-    <meta content="https://vatz88.in/media/icon_1200x1200.png" property="og:image" />
-    <meta content="Know and connect with Vatsal Joshi" property="og:description" />
-    <meta content="Vatsal Joshi" property="og:site_name" />
-    <meta content="663218817159771" property="fb:app_id">
-    <meta content="30AC13B4115EEFB980C0404E990B0FE7" name="msvalidate.01" />
-    <!-- css -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css" />
-    <link href="css/vz_style.css" rel="stylesheet">
+	<meta charset=UTF-8>
+	<title>Vatsal Joshi</title>
+	<!-- redirect http to https -->
+	<script>
+		if (window.location.protocol === "http:" && window.location.hostname !== "localhost") {
+			window.location.protocol = "https";
+		}
+		// Check for cache update
+		function onUpdateReady() {
+			window.location.reload();
+		}
+		window.applicationCache.addEventListener('updateready', onUpdateReady);
+		if (window.applicationCache.status === window.applicationCache.UPDATEREADY) {
+			onUpdateReady();
+		}
+	</script>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta name="description" content="Know and connect with Vatsal Joshi">
+	<meta content="Vatsal,Joshi,VaTz88,VaTz,Engineer,Coder,Developer,VIT,Vellore,Vadodara,India" name="keywords">
+	<meta content="Vatsal Joshi" name="author">
+	<meta name="theme-color" content="#424242">
+	<link href="media/favicon.png" rel="shortcut icon">
+	<link rel="apple-touch-icon image_src" href="media/apple-touch-icon_158x158.png">
+	<link rel="icon" sizes="192x192" href="media/icon_192x192.png">
+	<!-- twitter card -->
+	<meta content="summary" name="twitter:card">
+	<meta content=@VaTz88 name="twitter:site:id">
+	<meta content="Vatsal Joshi" name="twitter:title">
+	<meta content="Know and connect with Vatsal Joshi" name="twitter:description">
+	<meta content="https://vatz88.in/media/image_300x300.png" name="twitter:image">
+	<meta content="Vatsal Joshi" name="twitter:image:alt">
+	<!-- og tags -->
+	<meta content="Vatsal Joshi" property="og:title">
+	<meta content="website" property="og:type">
+	<meta content="https://vatz88.in/" property="og:url">
+	<meta content="https://vatz88.in/media/icon_1200x1200.png" property="og:image">
+	<meta content="Know and connect with Vatsal Joshi" property="og:description">
+	<meta content="Vatsal Joshi" property="og:site_name">
+	<meta content="663218817159771" property="fb:app_id">
+	<meta content="30AC13B4115EEFB980C0404E990B0FE7" name="msvalidate.01">
+	<!-- css -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+	<link href="css/vz_style.css" rel="stylesheet">
 </head>
 
-<body itemscope itemtype="https://schema.org/Person">
-    <!-- Google Analytics-->
-    <!-- commented becaue added automatically by cloudflare -->
-    <!--<script>
-        ! function (e, t, a, n, c, o, s) {
-            e.GoogleAnalyticsObject = c, e[c] = e[c] || function () {
-                    (e[c].q = e[c].q || []).push(arguments)
-                }, e[c].l = 1 * new Date, o = t.createElement(a), s = t.getElementsByTagName(a)[0], o.async = 1, o.src =
-                n, s.parentNode.insertBefore(o, s)
-        }(window, document, "script", "https://www.google-analytics.com/analytics.js", "ga"), ga("create",
-            "UA-75111209-2", "auto"), ga("send", "pageview")
-    </script>-->
-    <!-- Website Content-->
-    <main>
+<body itemscope itemtype="https://schema.org/Person" class="noselect">
+	<!-- Website Content-->
+	<main>
+		<div class="container">
+			<div class="myCard card-panel">
+				<div class="row">
+					<div class="col m12 s12 l6">
+						<span><img id="profilePic" alt="Vatsal Joshi" class="circle positionImgCenter responsive-img" itemprop="image" src="media/VatsalJoshi.jpg" title="Vatsal Joshi"></span>
+					</div>
+					<div class="col m12 s12 l6">
+						<div class="row center-align">
+							<div class="s12">
+								<h3><span itemprop="name">Vatsal Joshi</span><span class="hide" itemprop="alternateName">VaTz88</span></h3>
+							</div>
+							<div class="s12 flow-text">
+								&#60; <span id="typedText"></span> &#62;
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="myCard">
+				<ul class="collapsible" data-collapsible="accordion">
+					<li>
+						<div class="collapsible-header waves-effect waves-teal active">
+							<h5>About Me</h5>
+						</div>
+						<div class="collapsible-body">
+							<p id="AboutMeContent">Pursuing B.Tech. in Information Technology at VIT University, Vellore campus.</p>
+							<div id="resumeButtonAndText" class="hide"><a target="_blank" href="#resume" class="waves-effect waves-light btn" title="See résumé">Résumé</a>
+								<span style="margin-left:0.5%;margin-right:0.5%">or see on</span>
+								<a target="_blank" class="tooltipped" href="https://www.linkedin.com/in/vatz88" data-tooltip="LinkedIn" data-position="top" data-delay="25"><img src="media/linkedin.png" alt="LinkedIn"></a>
+							</div>
+						</div>
+					</li>
 
-        <div class="container">
+					<li>
+						<div class="collapsible-header waves-effect waves-teal">
+							<h5>My Projects</h5>
+						</div>
+						<div class="collapsible-body">
+							<p>
+								<a target="_blank" href="https://ffcsonthego.azurewebsites.net">FFCS on The Go</a>
+								<span>&mdash; website for the use of VITians to make FFCS course registrations hassle free.</span>
+								<br><br>
 
-            <div class="myCard card-panel">
-                <div class="row">
-                    <div class="col m12 s12 l6">
-                        <span><img id="profilePic" alt="Vatsal Joshi (VaTz88)" class="circle positionImgCenter responsive-img" itemprop="image" src="media/VatsalJoshi.jpg" title="Vatsal Joshi"></span>
-                    </div>
-                    <div class="col m12 s12 l6">
-                        <div class="row center-align">
-                            <div class="s12">
-                                <h3><span itemprop="name">Vatsal Joshi</span><span class="hide" itemprop="alternateName">VaTz88</span></h3>
-                            </div>
-                            <div class="s12 flow-text">
-                                &#60; <span id="typedText"></span> &#62;
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+								<a target="_blank" href="https://chrome.google.com/webstore/detail/v-top-easy/fdfcegkkhiialnmbnhkjpplpckpkhbmp">V-TOP Easy</a>
+								<span>&mdash; chrome extension to improve the UI of VIT student login and add some time saving features.</span>
+								<br><br>
 
-            <div class="myCard">
-                <ul class="collapsible" data-collapsible="accordion">
+								<a target="_blank" href="https://vzblog.herokuapp.com">VzBlog</a>
+								<span>&mdash; blog website where user can create profile and publish articles</span>
+								<br><br>
 
-                    <li>
-                        <div class="collapsible-header active">
-                            <h5>About Me</h5>
-                        </div>
-                        <div class="collapsible-body">
-                            <p id="AboutMeContent">Pursuing B.Tech. in Information Technology at VIT University, Vellore campus.</p>
-                            <div id="resumeButtonAndText" class="hide"><a href="#resume" class="waves-effect waves-light btn" title="See résumé">Résumé</a>
-                                <span style="margin-left:0.5%;margin-right:0.5%">or see on</span>
-                                <a class="tooltipped" href="https://www.linkedin.com/in/vatz88" data-tooltip="LinkedIn" data-position="top" data-delay="25"><img src="media/linkedin.png" alt="LinkedIn"></a>
-                            </div>
-                        </div>
-                    </li>
+								<span>See more on </span>
+								<a target="_blank" class="tooltipped" href="https://github.com/vatz88" data-tooltip="GitHub" data-position="top" data-delay="25"><img style="vertical-align: bottom;" src="media/github-circle.png" alt="GitHub"></a>
+							</p>
+						</div>
+					</li>
 
-                    <li>
-                        <div class="collapsible-header">
-                            <h5>My Projects</h5>
-                        </div>
-                        <div class="collapsible-body">
-                            <p>
-                                <a href="https://chrome.google.com/webstore/detail/v-top-easy/fdfcegkkhiialnmbnhkjpplpckpkhbmp">V-TOP Easy</a>
-                                <span>chrome extension to improve the UI of VIT student login and add some time saving features.</span>
-                                <br><br>
-                                <a href="http://ffcsonthego.azurewebsites.net">FFCS on The Go</a>
-                                <span>a website for the use of VITians to make FFCS course registrations hassle free.</span>
-                                <br><br>
-                                <span>See more on </span>
-                                <a class="tooltipped" href="https://github.com/vatz88" data-tooltip="GitHub" data-position="top" data-delay="25"><img style="vertical-align: bottom;" src="media/github-circle.png" alt="GitHub"></a>
-                            </p>
-                        </div>
-                    </li>
+					<li>
+						<div class="collapsible-header waves-effect waves-teal">
+							<h5>Connect With Me</h5>
+						</div>
+						<div class="collapsible-body">
+							<p>Over the Internet</p>
+							<div class="row" id="socialMediaButtons">
+								<div class="col l1 m1">
+									<a target="_blank" class="tooltipped" href="https://facebook.com/VaTz88" data-tooltip="Facebook" data-position="top" data-delay="25"><img src="media/facebook.png" alt="Facebook"></a>
+								</div>
+								<div class="col l1 m1">
+									<a target="_blank" class="tooltipped" href="https://twitter.com/vatz88" data-tooltip="Twitter" data-position="top" data-delay="25"><img src="media/twitter.png" alt="Twitter"></a>
+								</div>
+								<div class="col l1 m1">
+									<a target="_blank" class="tooltipped" href="https://plus.google.com/+VatsalJoshiVaTz88" data-tooltip="Google+" data-position="top" data-delay="25"><img src="media/google-plus.png" alt="Google+"></a>
+								</div>
+								<div class="col l1 m1">
+									<a target="_blank" class="tooltipped" href="https://www.instagram.com/vatz88" data-tooltip="Instagram" data-position="top" data-delay="25"><img src="media/instagram.png" alt="Instagram"></a>
+								</div>
+								<div class="col l1 m1">
+									<a target="_blank" class="tooltipped" href="https://www.snapchat.com/add/VaTz88" data-tooltip="Snapchat" data-position="top" data-delay="25"><img src="media/snapchat.png" alt="Snapchat"></a>
+								</div>
+								<div class="col l1 m1">
+									<a target="_blank" class="tooltipped" href="https://www.linkedin.com/in/vatz88" data-tooltip="LinkedIn" data-position="top" data-delay="25"><img src="media/linkedin.png" alt="LinkedIn"></a>
+								</div>
+								<div class="col l1 m1">
+									<a target="_blank" class="tooltipped" href="https://github.com/vatz88" data-tooltip="GitHub" data-position="top" data-delay="25"><img src="media/github-circle.png" alt="GitHub"></a>
+								</div>
+								<div class="col l1 m1">
+									<a target="_blank" class="tooltipped" href="https://stackoverflow.com/users/5733059/vatz88" data-tooltip="Stack Overflow" data-position="top" data-delay="25"><img src="media/stackoverflow.png" alt="Stack Overflow"></a>
+								</div>
+								<div class="col l1 m1">
+									<a target="_blank" class="tooltipped" href="https://www.hackerearth.com/@vatz88" data-tooltip="HackerEarth" data-position="top" data-delay="25"><img id="hackerearth" src="media/hackerearth.png" alt="HackerEarth"></a>
+								</div>
+							</div>
+							<p>Message, Mail or give a Call</p>
+							<div class="row" id="mailORcallButtons">
+								<div class="col l1 m1 hide-on-med-and-up">
+									<a target="_blank" class="tooltipped" href="whatsapp://send?text=VzHello!&phone=+919943178881" data-tooltip="WhatsApp" data-position="top" data-delay="25"><img src="media/whatsapp.png" alt="WhatsApp"></a>
+								</div>
+								<div class="col l1 m1">
+									<a target="_blank" class="tooltipped" href="https://m.me/VaTz88" data-tooltip="Messenger" data-position="top" data-delay="25"><img src="media/facebook-messenger.png" alt="Messenger"></a>
+								</div>
+								<div class="col l1 m1">
+									<a target="_blank" class="tooltipped" href="mailto:vatz88@gmail.com" data-tooltip="Mail" data-position="top" data-delay="25"><img src="media/email.png" alt="Mail"></a>
+								</div>
+								<div class="col l1 m1">
+									<a target="_blank" class="tooltipped" href="tel:00919943178881" data-tooltip="Call" data-position="top" data-delay="25"><img src="media/phone.png" alt="Call"></a>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- End of container -->
+	</main>
 
-                    <li>
-                        <div class="collapsible-header">
-                            <h5>Connect With Me</h5>
-                        </div>
-                        <div class="collapsible-body">
-                            <p>Over the Internet</p>
-                            <div class="row" id="socialMediaButtons">
-                                <div class="col l1 m1">
-                                    <a class="tooltipped" href="https://facebook.com/VaTz88" data-tooltip="Facebook" data-position="top" data-delay="25"><img src="media/facebook.png" alt="Facebook"></a>
-                                </div>
-                                <div class="col l1 m1">
-                                    <a class="tooltipped" href="https://twitter.com/vatz88" data-tooltip="Twitter" data-position="top" data-delay="25"><img src="media/twitter.png" alt="Twitter"></a>
-                                </div>
-                                <div class="col l1 m1">
-                                    <a class="tooltipped" href="https://plus.google.com/+VatsalJoshiVaTz88" data-tooltip="Google+" data-position="top" data-delay="25"><img src="media/google-plus.png" alt="Google+"></a>
-                                </div>
-                                <div class="col l1 m1">
-                                    <a class="tooltipped" href="https://www.instagram.com/vatz88" data-tooltip="Instagram" data-position="top" data-delay="25"><img src="media/instagram.png" alt="Instagram"></a>
-                                </div>
-                                <div class="col l1 m1">
-                                    <a class="tooltipped" href="https://www.snapchat.com/add/VaTz88" data-tooltip="Snapchat" data-position="top" data-delay="25"><img src="media/snapchat.png" alt="Snapchat"></a>
-                                </div>
-                                <div class="col l1 m1">
-                                    <a class="tooltipped" href="https://www.linkedin.com/in/vatz88" data-tooltip="LinkedIn" data-position="top" data-delay="25"><img src="media/linkedin.png" alt="LinkedIn"></a>
-                                </div>
-                                <div class="col l1 m1">
-                                    <a class="tooltipped" href="https://github.com/vatz88" data-tooltip="GitHub" data-position="top" data-delay="25"><img src="media/github-circle.png" alt="GitHub"></a>
-                                </div>
-                                <div class="col l1 m1">
-                                    <a class="tooltipped" href="https://stackoverflow.com/users/5733059/vatz88" data-tooltip="Stack Overflow" data-position="top"
-                                        data-delay="25"><img src="media/stackoverflow.png" alt="Stack Overflow"></a>
-                                </div>
-                                <div class="col l1 m1">
-                                    <a class="tooltipped" href="https://www.hackerearth.com/@vatz88" data-tooltip="HackerEarth" data-position="top" data-delay="25"><img id="hackerearth" src="media/hackerearth.png" alt="HackerEarth"></a>
-                                </div>
-                            </div>
-                            <p>Message, Mail or give a Call</p>
-                            <div class="row" id="mailORcallButtons">
-                                <div class="col l1 m1">
-                                    <a class="tooltipped" href="https://m.me/VaTz88" data-tooltip="Message on Messenger" data-position="top" data-delay="25"><img src="media/facebook-messenger.png" alt="Messenger"></a>
-                                </div>
-                                <div class="col l1 m1">
-                                    <a class="tooltipped" href="mailto:vatz88@gmail.com" data-tooltip="Send mail" data-position="top" data-delay="25"><img src="media/email.png" alt="Mail"></a>
-                                </div>
-                                <div class="col l1 m1">
-                                    <a class="tooltipped" href="tel:00919943178881" data-tooltip="Call now" data-position="top" data-delay="25"><img src="media/phone.png" alt="Call"></a>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
+	<footer class="container">
+		<div class="myCardNoPadding card-panel">
+			<div class="row center">
+				<div class="col m5 hide-on-small-only">
+					<p>© 2017 Vatsal Joshi</p>
+				</div>
+				<span class="col m1 hide-on-small-only"><p>|</p></span>
+				<div class="col s12 m5">
+					<p><a target="_blank" href="https://blog.vatz88.in">blog.vatz88.in <img style="width:14px;" src="media/open-in-new.png"></a></p>
+				</div>
+			</div>
+		</div>
+	</footer>
 
-                </ul>
-            </div>
+	<!-- Resume in modal -->
+	<div class="modal modal-fixed-footer" id="resume">
+		<div class="modal-content">
+			<iframe src="https://docs.google.com/viewer?srcid=1CLHIbKD52y6qHZ4Sp18MkSb3hWSHQM0Mg8bBWxw3Afw&pid=explorer&efh=false&a=v&chrome=false&embedded=true"></iframe>
+		</div>
+		<!-- modal-content -->
+		<div class="modal-footer">
+			<button class="btn-flat modal-action waves-effect waves-green modal-close tooltipped" data-tooltip="Close" data-position="top" data-delay="25"><img src="media/close.png" alt="close"></button>
+			<button class="btn-flat modal-action waves-effect waves-green tooltipped" data-tooltip="Download" data-position="top" data-delay="25" onclick='window.location="https://docs.google.com/document/d/1CLHIbKD52y6qHZ4Sp18MkSb3hWSHQM0Mg8bBWxw3Afw/export?format=pdf"'><img src="media/download.png" alt="download"></a>
+		</div>
+	</div>
+	<!-- End of modal -->
 
-        </div>
-        <!-- End of container -->
-
-    </main>
-
-    <footer class="container">
-        <div class="myCardNoPadding card-panel">
-            <div class="row center">
-                <div class="col m5 hide-on-small-only">
-                    <p>© 2017 Vatsal Joshi</p>
-                </div>
-                <span class="col m1 hide-on-small-only"><p>|</p></span>
-                <div class="col s12 m5">
-                    <p><a href="https://blog.vatz88.in">blog.vatz88.in <img style="width:14px;" src="media/open-in-new.png"></a></p>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Resume -->
-    <div class="modal modal-fixed-footer" id="resume">
-        <div class="modal-content">
-            <div class="row">
-                <div class="col">
-                    <h4>Vatsal Joshi</h4>
-                </div>
-                <div class="col">
-                    <p>hello@vatz88.in</p>
-                </div>
-            </div>
-            <hr>
-            <div>
-                <div class="section">
-                    <h5>Education</h5>
-                    <div class="row">
-                        <p class="col l7 m7">B.Tech. Information Technology, VIT University, Vellore Campus.</p>
-                        <p class="col l5 m5">Expected Graduation May 2018</p>
-                    </div>
-                </div>
-                <div class="divider"></div>
-                <div class="section">
-                    <h5>Skills</h5>
-                    <div class="row">
-                        <p class="col m12 s12 l12">Full Stack Developer, Competitive Coding</p>
-                    </div>
-                    <div class="row">
-                        <div class="col m12 l12">
-                            <p>Coding languages / Technologies / Frameworks:</p>
-                        </div>
-                        <div class="col m12 l12">
-                            <p>Go, C++, C, JavaScript (jQuery), NodeJS (ExpressJS, EJS), SQL, CSS (Bootstrap, MaterializeCSS),
-                                Java, Python</p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <blockquote>Comfortable with Linux and Git</blockquote>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="divider"></div>
-            <div class="section">
-                <h5>Projects</h5>
-                <div class="row">
-                    <p class="col m12 s12 l12"><span><a href="https://chrome.google.com/webstore/detail/v-top-easy/fdfcegkkhiialnmbnhkjpplpckpkhbmp">V-TOP Easy</a></span>                        chrome extension to improve the UI of VIT student login and add some time saving features.</p>
-                    <p class="col m12 s12 l12"><span><a href="http://ffcsonthego.azurewebsites.net/" >FFCS on The Go</a></span> website for hassle free
-                        FFCS course registration (More than 35K Hits since last two semester).</p>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <p>Other Projects:</p>
-                    </div>
-                    <div class="col">
-                        <p>CGPA Calculator (Android), Text file encrytion and decryption (C++).</p>
-                    </div>
-                </div>
-            </div>
-            <div class="divider"></div>
-            <div>
-                <div class="section">
-                    <h5>Campus Activites</h5>
-                    <div class="row">
-                        <p class="col m12 s12 l12">Microsoft Student Partner (MSP) and member of Microsoft Innovation Center at VIT.</p>
-                    </div>
-                    <div class="row">
-                        <p class="col m12 s12 l12">Member of ACM (Association for Computing Machinery) VIT Student Chapter.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="divider"></div>
-            <div>
-                <div class="section">
-                    <h5>Certifications</h5>
-                    <div class="row">
-                        <div class="col m12 s12 l12">
-                            <p>IMAD (Introduction to Modern Application Development) by IIT Madras / NPTEL
-                                <br><span style="font-size: smaller;">Successfully completed with 91% and ranked among Top 2 % of Certified Candidates. Verify <a href="http://nptel.ac.in/noc/individual_course.php?id=noc16-cs23">here</a></span>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="divider"></div>
-            <div>
-                <div class="section">
-                    <h5>Awards</h5>
-                    <div class="row">
-                        <p class="col m12 s12 l12">Won 3<sup>rd</sup> prize in Bug tracker organized by codechef-VIT during graVITas (VIT’s tech fest)
-                            2015.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- modal-content -->
-        <div class="modal-footer">
-            <button class="btn-flat modal-action waves-effect waves-green modal-close tooltipped" data-tooltip="Close" data-position="top"
-                data-delay="25"><img src="media/close.png" alt="close"></button>
-            <a href="https://docs.google.com/document/d/1vR4zU0g_ZmY6zMgCF3VGejAs9n4meObesinS0yE3zis/export?format=pdf" class="btn-flat modal-action waves-effect waves-green tooltipped"
-                data-tooltip="Save" data-position="top" data-delay="25"><img src="media/download.png" alt="download"></a>
-        </div>
-    </div>
-    <!-- modal -->
-    <!-- js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.7/typed.min.js"></script>
-    <script src="js/vz_script.js"></script>
+	<!-- js -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.7/typed.min.js"></script>
+	<script src="js/vz_script.js"></script>
 </body>
 
 </html>

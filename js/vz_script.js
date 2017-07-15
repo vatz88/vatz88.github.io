@@ -26,6 +26,17 @@ $(function () {
 		loop: true
 	});
 
+	// vzplay
+	$("#vzplay").click(function () {
+		(function (arr) {
+			var e = $.Event('keydown');
+			arr.forEach(function (k) {
+				e.which = k;
+				$(window).trigger(e);
+			});
+		})([118, 122, 112, 108, 97, 121]);
+	});
+
 	/* I'm is watching you! */
 	var isTouchDevice = 'ontouchstart' in document.documentElement;
 	if (!isTouchDevice) {

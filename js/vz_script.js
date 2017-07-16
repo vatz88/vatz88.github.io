@@ -1,19 +1,23 @@
 $(function () {
-	$('.modal').modal();
-	if ((window.location.hash).toLowerCase() === "#resume") {
-		if ($("#resume iframe").length === 0) {
-			$("#resume .modal-content").html('<iframe src="https://docs.google.com/viewer?srcid=1CLHIbKD52y6qHZ4Sp18MkSb3hWSHQM0Mg8bBWxw3Afw&pid=explorer&efh=false&a=v&chrome=false&embedded=true"></iframe>');
-		}
-		$("#resume").modal('open');
-	}
-	window.onhashchange = function () {
-		if ((location.hash).toLowerCase() === "#resume") {
+	$('.modal').modal({
+		ready: function () {
 			if ($("#resume iframe").length === 0) {
 				$("#resume .modal-content").html('<iframe src="https://docs.google.com/viewer?srcid=1CLHIbKD52y6qHZ4Sp18MkSb3hWSHQM0Mg8bBWxw3Afw&pid=explorer&efh=false&a=v&chrome=false&embedded=true"></iframe>');
 			}
-			$("#resume").modal('open');
+		},
+		complete: function () {
+			// remove hash sign without reloading the window
+			history.pushState("", document.title, window.location.pathname + window.location.search);
 		}
-	};
+	});
+	window.onhashchange = (function () {
+		if ((window.location.hash).toLowerCase() === "#resume") {
+			$("#resume").modal('open');
+		} else if (window.location.hash !== "") {
+			Materialize.toast('<h4>Err, try #resume</h4>', 3500, 'rounded');
+		}
+		return arguments.callee;
+	})();
 
 	// typed.js
 	$("#typedText").typed({

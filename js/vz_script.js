@@ -19,11 +19,6 @@ $(function () {
 	window.onhashchange = (function () {
 		if ((window.location.hash).toLowerCase() === "#resume") {
 			$("#resume").modal('open');
-			ga('send', {
-				hitType: 'event',
-				eventCategory: 'Resume',
-				eventAction: 'open'
-			});
 		} else if (window.location.hash !== "") {
 			Materialize.toast('<h4>Err, try #resume</h4>', 3500, 'rounded');
 		}

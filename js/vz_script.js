@@ -2,7 +2,7 @@ $(function () {
 	$('.modal').modal({
 		ready: function () {
 			if ($("#resume iframe").length === 0) {
-				$("#resume .modal-content").html('<iframe src="https://docs.google.com/viewer?srcid=1CLHIbKD52y6qHZ4Sp18MkSb3hWSHQM0Mg8bBWxw3Afw&pid=explorer&efh=false&a=v&chrome=false&embedded=true"></iframe>');
+				$("#resume .modal-content").html('<iframe src="https://docs.google.com/viewer?srcid=1mayR9xRDXRXmHcmGClmzXFbbOZsCA86jjjVTfSbDobg&pid=explorer&efh=false&a=v&chrome=false&embedded=true"></iframe>');
 				// ga event
 				ga('send', {
 					hitType: 'event',
@@ -72,11 +72,21 @@ $(function () {
 		$('.tooltipped').tooltip('remove');
 	}
 
+	// Google analytics - add events
 	$("#resumeDownloadBtn").click(function () {
 		ga('send', {
 			hitType: 'event',
 			eventCategory: 'Resume',
 			eventAction: 'download'
+		});
+	});
+	$("#socialMediaButtons").on("click", "a", function () {
+		var eventName = $(this).data("tooltip");
+		console.log(eventName);
+		ga('send', {
+			hitType: 'event',
+			eventCategory: 'Connect',
+			eventAction: eventName
 		});
 	});
 });

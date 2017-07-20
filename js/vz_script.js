@@ -82,7 +82,6 @@ $(function () {
 	});
 	$("#socialMediaButtons").on("click", "a", function () {
 		var eventName = $(this).data("tooltip");
-		console.log(eventName);
 		ga('send', {
 			hitType: 'event',
 			eventCategory: 'Connect',

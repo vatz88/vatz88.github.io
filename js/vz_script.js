@@ -98,15 +98,15 @@ document.oncontextmenu = function (e) {
 	}
 };
 
-var onkeydownT = true;
+var keydownflag = true;
 document.onkeydown = function (e) {
 	if (e.ctrlKey && ((e.keyCode === 117 || e.keyCode === 85) || (e.shiftKey && ((e.keyCode === 73 || e.keyCode === 105) || (e.keyCode === 67 || e.keyCode === 99))))) {
-		if (onkeydownT) {
-			onkeydownT = false;
+		if (keydownflag) {
+			keydownflag = false;
 			Materialize.toast('<h3>Loved it?</h3>', 2500, 'rounded', function () {
 				Materialize.toast('<h3>Interested in code?</h3>', 2500, 'rounded', function () {
 					Materialize.toast('<h3>Follow me on GitHub :)</h3>', 3000, 'rounded', function () {
-						onkeydownT = true;
+						keydownflag = true;
 					});
 				});
 			});
@@ -119,4 +119,4 @@ document.onkeydown = function (e) {
 
 // console message
 var consolestyles = ['font-size: 46px', 'color: #757575'].join(';');
-console.log('%cVaTz88', consolestyles);
+console.log('%cvatz88', consolestyles);

@@ -26,9 +26,10 @@ $(function () {
 	})();
 
 	// typed.js
-	$("#typedText").typed({
-		strings: ["Tech enthusiast.", "Enjoy coding.", "Swimming, football, chess, etc.", "Stay connected!"],
-		typeSpeed: 0,
+	var typed = new Typed('#typedText', {
+		strings: ["Tech", "Coding", "Swimming, football, chess..", "Stay connected!"],
+		typeSpeed: 30,
+		backSpeed: 10,
 		startDelay: 800,
 		showCursor: true,
 		cursorChar: " /",

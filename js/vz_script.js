@@ -37,6 +37,11 @@ $(function () {
 		loop: true
 	});
 
+	// Night Mode
+	$("#profilePic").click(function () {
+		$("body").toggleClass("night");
+	});
+
 	/* I'm is watching you! */
 	var isTouchDevice = 'ontouchstart' in document.documentElement;
 	if (!isTouchDevice) {

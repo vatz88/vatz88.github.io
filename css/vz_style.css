@@ -25,6 +25,7 @@ main h6 {
 }
 
 #profilePic {
+	cursor: pointer;
 	width: 10em;
 }
 
@@ -43,12 +44,6 @@ main h6 {
 .collapsible-header h5,
 .collapsible-header h6 {
 	cursor: pointer;
-}
-
-#socialMediaButtons #hackerearth {
-	height: 24px;
-	width: auto;
-	background-color: rgba(0, 0, 0, 0.54);
 }
 
 #mailORcallButtons,
@@ -109,4 +104,27 @@ footer a {
 	/* Internet Explorer/Edge */
 	user-select: none;
 	/* Non-prefixed version, currently supported by Chrome and Opera */
+}
+
+
+/* Night Mode */
+
+body.night {
+	background-color: #37474F!important;
+}
+
+.night .card-panel,
+.night .myCard * {
+	background-color: #455A64!important;
+	color: #eeeeee!important;
+	border-color: rgba(0, 0, 0, 0.2)!important;
+}
+
+.night a,
+.night h3 {
+	color: #eeeeee!important;
+}
+
+.night .myCard a {
+	color: #26A69A!important;
 }

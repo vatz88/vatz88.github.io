@@ -25,6 +25,15 @@ $(function () {
 		return arguments.callee;
 	})();
 
+	// Night Mode
+	$("#profilePic").click(function () {
+		$("body").toggleClass("night");
+	});
+	var hour = (new Date()).getHours();
+	if (hour < 4 || hour > 18) {
+		$("body").addClass("night");
+	}
+
 	// typed.js
 	var typed = new Typed('#typedText', {
 		strings: ["Tech", "Coding", "Swimming, football, chess..", "Stay connected!"],
@@ -35,11 +44,6 @@ $(function () {
 		cursorChar: " /",
 		backDelay: 1400,
 		loop: true
-	});
-
-	// Night Mode
-	$("#profilePic").click(function () {
-		$("body").toggleClass("night");
 	});
 
 	/* I'm is watching you! */

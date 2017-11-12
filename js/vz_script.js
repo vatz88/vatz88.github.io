@@ -128,5 +128,5 @@ document.onkeydown = function (e) {
 };
 
 // console message
-var consolestyles = ['font-size: 46px', 'color: #757575'].join(';');
-console.log('%cvatz88', consolestyles);
+console.log('%cvatz88', ['font-size: 64px', 'color: #757575'].join(';'));
+console.log('%cHover over the pic ;)', ['font-size: 24px', 'color: #00BFA5'].join(';'));

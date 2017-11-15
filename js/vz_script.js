@@ -72,12 +72,6 @@ $(function () {
 			}
 			$profilePic.css('transform', 'translateZ( -200px ) perspective( 600px ) rotateY( ' + Ydeg + 'deg ) rotateX( ' + Xdeg + 'deg )');
 		});
-		// show vzplay on hover on profile pic
-		$("#profilePic").hover(function () {
-			$("#vzplay").slideDown();
-		}, function () {
-			$("#vzplay").slideUp();
-		});
 	} else {
 		$('.tooltipped').tooltip('remove');
 	}
@@ -129,4 +123,4 @@ document.onkeydown = function (e) {
 
 // console message
 console.log('%cvatz88', ['font-size: 64px', 'color: #757575'].join(';'));
-console.log('%cHover over the pic ;)', ['font-size: 24px', 'color: #00BFA5'].join(';'));
+console.log('%cType play in the window ;)', ['font-size: 24px', 'color: #00BFA5'].join(';'));

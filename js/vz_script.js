@@ -30,20 +30,21 @@ $(function () {
 		$("body").toggleClass("night");
 	});
 	var hour = (new Date()).getHours();
-	if (hour < 4 || hour > 18) {
+	if (hour < 5 || hour > 17) {
 		$("body").addClass("night");
 	}
 
 	// typed.js
 	var typed = new Typed('#typedText', {
-		strings: ["Tech", "Coding", "Swimming, football, chess..", "Stay connected!"],
+		strings: ["Hi there!", "Good to see you here.", "I would love to hear from you.", "Connect with me @vatz88"],
 		typeSpeed: 30,
 		backSpeed: 10,
-		startDelay: 800,
+		startDelay: 4000,
 		showCursor: true,
 		cursorChar: " /",
-		backDelay: 1400,
-		loop: true
+		backDelay: 2000,
+		// loop: true
+		loop: false
 	});
 
 	/* I'm is watching you! */
@@ -122,5 +123,8 @@ document.onkeydown = function (e) {
 };
 
 // console message
-console.log('%cvatz88', ['font-size: 64px', 'color: #757575'].join(';'));
-console.log('%cType play in the window ;)', ['font-size: 24px', 'color: #00BFA5'].join(';'));
+setTimeout(function () {
+	console.clear();
+	console.log('%cvatz88', ['font-size: 64px', 'color: #757575'].join(';'));
+	console.log('%cType play in the window ;)', ['font-size: 24px', 'color: #00BFA5'].join(';'));
+}, 8800);

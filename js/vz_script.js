@@ -49,30 +49,33 @@ $(function () {
 
   /* I'm is watching you! */
   var isTouchDevice = 'ontouchstart' in document.documentElement;
+  var isSafari = (navigator.vendor || '').indexOf('Apple') > -1;
   if (!isTouchDevice) {
-    var $profilePic = $('#profilePic');
-    var dh = $(document).height() / 2;
-    var dw = $(document).width() / 2;
-    var maxRotate = 20;
-    window.onresize = function (event) {
-      dh = $(document).height() / 2;
-      dw = $(document).width() / 2;
-    };
-    $(document).mousemove(function (event) {
-      var Xdeg = 90 - (event.pageY * 90) / dh;
-      var Ydeg = -90 + (event.pageX * 90) / dw;
-      if (Xdeg > 0) {
-        Xdeg = Xdeg > maxRotate ? maxRotate : Xdeg % maxRotate;
-      } else {
-        Xdeg = Xdeg < -maxRotate ? -maxRotate : -(-Xdeg % maxRotate);
-      }
-      if (Ydeg > 0) {
-        Ydeg = Ydeg > maxRotate ? maxRotate : Ydeg % maxRotate;
-      } else {
-        Ydeg = Ydeg < -maxRotate ? -maxRotate : -(-Ydeg % maxRotate);
-      }
-      $profilePic.css('transform', 'translateZ( -200px ) perspective( 600px ) rotateY( ' + Ydeg + 'deg ) rotateX( ' + Xdeg + 'deg )');
-    });
+    if (!isSafari) {
+      var $profilePic = $('#profilePic');
+      var dh = $(document).height() / 2;
+      var dw = $(document).width() / 2;
+      var maxRotate = 20;
+      window.onresize = function () {
+        dh = $(document).height() / 2;
+        dw = $(document).width() / 2;
+      };
+      $(document).mousemove(function (event) {
+        var Xdeg = 90 - (event.pageY * 90) / dh;
+        var Ydeg = -90 + (event.pageX * 90) / dw;
+        if (Xdeg > 0) {
+          Xdeg = Xdeg > maxRotate ? maxRotate : Xdeg % maxRotate;
+        } else {
+          Xdeg = Xdeg < -maxRotate ? -maxRotate : -(-Xdeg % maxRotate);
+        }
+        if (Ydeg > 0) {
+          Ydeg = Ydeg > maxRotate ? maxRotate : Ydeg % maxRotate;
+        } else {
+          Ydeg = Ydeg < -maxRotate ? -maxRotate : -(-Ydeg % maxRotate);
+        }
+        $profilePic.css('transform', 'translateZ( -200px ) perspective( 600px ) rotateY( ' + Ydeg + 'deg ) rotateX( ' + Xdeg + 'deg )');
+      });
+    }
   } else {
     $('.tooltipped').tooltip('remove');
   }

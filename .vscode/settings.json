@@ -5,6 +5,12 @@
   "spellright.documentTypes": [
     "latex",
     "plaintext",
-    "markdown"
-  ]
+    "markdown",
+    "svelte"
+  ],
+  "spellright.parserByClass": {
+    "svelte": {
+      "parser": "code"
+    }
+  }
 }

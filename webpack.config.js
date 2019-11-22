@@ -8,7 +8,7 @@ module.exports = function(env) {
 
   return {
     mode: isProdcution ? 'production' : 'development',
-    entry: path.resolve(__dirname, 'src/app.svelte'),
+    entry: path.resolve(__dirname, 'src/index.js'),
     output: {
       filename: '[name].[contenthash].js',
       path: path.resolve(__dirname, '.'),
@@ -24,9 +24,8 @@ module.exports = function(env) {
     },
     plugins: [
       new CleanWebpackPlugin({
-        dry: true,
+        // dry: true,
         cleanOnceBeforeBuildPatterns: ['index.html', 'main.*.js'],
-        // cleanOnceBeforeBuildPatterns: ['!src', '!package*', '!node_modules', '!webpack*'],
       }),
       new HtmlWebpackPlugin({
         filename: 'index.html',

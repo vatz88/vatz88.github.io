@@ -1,10 +1,10 @@
-// Place your settings in this file to overwrite default and user settings.
 {
-  "editor.tabSize": 2,
-  "files.insertFinalNewline": true,
-  "files.trimFinalNewlines": true,
-  "prettier.singleQuote": true,
-  "prettier.printWidth": 120,
-  "prettier.trailingComma": "es5",
-  "prettier.arrowParens": "always",
+  "spellright.language": [
+    "en"
+  ],
+  "spellright.documentTypes": [
+    "latex",
+    "plaintext",
+    "markdown"
+  ]
 }

@@ -13,6 +13,10 @@ module.exports = function(env) {
       filename: '[name].[contenthash].js',
       path: path.resolve(__dirname, '.'),
     },
+    devtool: 'source-map',
+    devServer: {
+      contentBase: './',
+    },
     module: {
       rules: [
         {

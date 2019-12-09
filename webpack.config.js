@@ -2,9 +2,25 @@ const path = require('path');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-module.exports = function(env) {
+function getWebpackConfig(env) {
   const isProdcution = env === 'production' ? true : false;
+
+  const cssLoaders = [
+    {
+      loader: MiniCssExtractPlugin.loader,
+      options: {
+        hmr: !isProdcution,
+      },
+    },
+    {
+      loader: 'css-loader',
+      options: { importLoaders: 1 },
+    },
+    'postcss-loader',
+    'sass-loader',
+  ].filter(Boolean);
 
   return {
     mode: isProdcution ? 'production' : 'development',
@@ -13,7 +29,7 @@ module.exports = function(env) {
       filename: '[name].[contenthash].js',
       path: path.resolve(__dirname, '.'),
     },
-    devtool: 'source-map',
+    devtool: isProdcution ? 'source-map' : 'inline-source-map',
     devServer: {
       contentBase: './',
     },
@@ -24,17 +40,40 @@ module.exports = function(env) {
           exclude: /node_modules/,
           use: 'svelte-loader',
         },
+        {
+          test: /\.(css|scss|sass)$/,
+          use: cssLoaders,
+        },
+        {
+          test: /\.(png|jpe?g|gif)$/i,
+          loader: 'file-loader',
+          options: {
+            name() {
+              if (isProdcution) {
+                return '[contenthash].[ext]';
+              }
+              return '[path][name].[ext]';
+            },
+          },
+        },
       ],
     },
     plugins: [
       new CleanWebpackPlugin({
         // dry: true,
-        cleanOnceBeforeBuildPatterns: ['index.html', 'main.*.js'],
+        cleanOnceBeforeBuildPatterns: [
+          'index.html',
+          'main.*.js',
+          'main.*.js.map',
+        ],
       }),
+      new MiniCssExtractPlugin(),
       new HtmlWebpackPlugin({
         filename: 'index.html',
         template: path.resolve(__dirname, 'src/template.html'),
       }),
     ],
   };
-};
+}
+
+module.exports = getWebpackConfig(process.env.NODE_ENV);

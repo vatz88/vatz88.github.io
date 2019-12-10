@@ -36,6 +36,18 @@ function getWebpackConfig(env) {
     module: {
       rules: [
         {
+          test: /\.(svelte|m?js)$/,
+          exclude: /node_modules/,
+          include: /node_modules\/svelte/,
+          use: {
+            loader: 'babel-loader',
+            options: {
+              presets: ['@babel/preset-env'],
+              plugins: ['@babel/plugin-proposal-object-rest-spread'],
+            },
+          },
+        },
+        {
           test: /\.(svelte)$/,
           exclude: /node_modules/,
           use: 'svelte-loader',

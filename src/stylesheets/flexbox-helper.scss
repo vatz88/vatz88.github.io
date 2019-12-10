@@ -1,0 +1,15 @@
+.fx-container {
+  display: flex;
+
+  &.fx-direction-column {
+    flex-direction: column;
+  }
+
+  > .fx-item {
+    flex: 1;
+
+    &.fx-grow-zero {
+      flex-grow: 0;
+    }
+  }
+}

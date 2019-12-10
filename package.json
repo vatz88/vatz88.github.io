@@ -5,7 +5,7 @@
   "scripts": {
     "start": "webpack-dev-server",
     "start:open": "npm start -- --open",
-    "build": "NODE_ENV=production webpack",
+    "build": "cross-env NODE_ENV=production webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "husky": {
@@ -32,8 +32,13 @@
     "url": "https://github.com/vatz88/vatz88.github.io/issues"
   },
   "homepage": "https://github.com/vatz88/vatz88.github.io#readme",
+  "browserslist": [
+    "defaults"
+  ],
   "devDependencies": {
+    "autoprefixer": "^9.7.3",
     "clean-webpack-plugin": "^3.0.0",
+    "cross-env": "^6.0.3",
     "css-loader": "^3.3.0",
     "file-loader": "^5.0.2",
     "html-webpack-plugin": "^3.2.0",

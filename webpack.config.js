@@ -59,20 +59,25 @@ function getWebpackConfig(env) {
       ],
     },
     plugins: [
-      new CleanWebpackPlugin({
-        // dry: true,
-        cleanOnceBeforeBuildPatterns: [
-          'index.html',
-          'main.*.js',
-          'main.*.js.map',
-        ],
+      isProdcution &&
+        new CleanWebpackPlugin({
+          // dry: true,
+          cleanOnceBeforeBuildPatterns: [
+            'index.html',
+            'main.*.css',
+            'main.*.css.map',
+            'main.*.js',
+            'main.*.js.map',
+          ],
+        }),
+      new MiniCssExtractPlugin({
+        filename: '[name].[contenthash].css',
       }),
-      new MiniCssExtractPlugin(),
       new HtmlWebpackPlugin({
         filename: 'index.html',
         template: path.resolve(__dirname, 'src/template.html'),
       }),
-    ],
+    ].filter(Boolean),
   };
 }
 

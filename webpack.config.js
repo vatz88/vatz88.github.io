@@ -83,7 +83,10 @@ function getWebpackConfig(env) {
           ],
         }),
       new MiniCssExtractPlugin({
-        filename: '[name].[contenthash].css',
+        filename: isProdcution ? '[name].[contenthash].css' : '[name].css',
+        chunkFilename: isProdcution
+          ? '[name].[contenthash].chunk.css'
+          : '[name].chunk.css',
       }),
       new HtmlWebpackPlugin({
         filename: 'index.html',

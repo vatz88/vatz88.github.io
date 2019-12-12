@@ -1,8 +1,10 @@
 @import './stylesheets/flexbox-helper.scss';
 
 body {
-  background-color: #eee;
+  display: block;
+  margin: 8px;
+  padding: 8px;
+  background-color: rgb(50, 54, 57);
+  color: rgb(232, 234, 237);
   font-family: sans-serif;
-  margin: 0;
-  padding: 5rem;
 }

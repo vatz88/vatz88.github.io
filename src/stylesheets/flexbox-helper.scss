@@ -1,8 +1,16 @@
 .fx-container {
   display: flex;
 
-  &.fx-direction-column {
+  &.direction-column {
     flex-direction: column;
+  }
+
+  &.align-center {
+    align-items: center;
+  }
+
+  &.justify-center {
+    justify-content: center;
   }
 
   > .fx-item {

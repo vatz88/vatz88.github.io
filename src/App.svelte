@@ -28,7 +28,7 @@
 
 <div class="App fx-container direction-column align-center justify-center">
   <div class="fx-item fx-grow-zero">
-    <img id="profile-pic" src="/public/vatsal_joshi.png" alt="Vatsal Joshi" />
+    <img id="profile-pic" src="/public/vatsal-joshi.png" alt="Vatsal Joshi" />
   </div>
   <div class="fx-item fx-grow-zero">
     <h1>Vatsal Joshi</h1>

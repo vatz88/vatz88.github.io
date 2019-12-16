@@ -26,7 +26,7 @@ function getWebpackConfig(env) {
     mode: isProdcution ? 'production' : 'development',
     entry: path.resolve(__dirname, 'src/index.js'),
     output: {
-      filename: '[name].[contenthash].js',
+      filename: isProdcution ? '[name].[contenthash].js' : '[name].js',
       path: path.resolve(__dirname, '.'),
     },
     devtool: isProdcution ? 'source-map' : 'inline-source-map',

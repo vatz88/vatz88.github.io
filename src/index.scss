@@ -1,10 +1,16 @@
 @import './stylesheets/flexbox-helper.scss';
 
+* {
+  box-sizing: border-box;
+}
+
+html,
 body {
-  display: block;
-  margin: 8px;
-  padding: 8px;
-  background-color: rgb(50, 54, 57);
-  color: rgb(232, 234, 237);
-  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  min-height: 400px;
 }

@@ -1,0 +1,23 @@
+.fx-container {
+  display: flex;
+
+  &.direction-column {
+    flex-direction: column;
+  }
+
+  &.align-center {
+    align-items: center;
+  }
+
+  &.justify-center {
+    justify-content: center;
+  }
+
+  > .fx-item {
+    flex: 1;
+
+    &.fx-grow-zero {
+      flex-grow: 0;
+    }
+  }
+}

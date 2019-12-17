@@ -1,5 +1,6 @@
 # TODO
 
+- https://github.com/peaceiris/actions-gh-pages
 - Handle resume path
 - Make use of itemscope itemtype="https://schema.org/Person"
 - Theme change on profile pic click (Light, Dark and may be more in future)

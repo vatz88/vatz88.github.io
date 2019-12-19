@@ -1,5 +1,6 @@
 <script>
-  import Modal from './components/Modal.svelte';
+  import Modal from './components/generic/Modal.svelte';
+  import Resume from './components/Resume.svelte';
 
   let showResume = true;
   function closeResumeModal() {
@@ -56,5 +57,7 @@
 </div>
 
 {#if showResume}
-  <Modal onClose={closeResumeModal} />
+  <Modal onClose={closeResumeModal}>
+    <Resume />
+  </Modal>
 {/if}

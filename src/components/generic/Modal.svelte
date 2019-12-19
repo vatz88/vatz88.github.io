@@ -1,5 +1,5 @@
 <script>
-  export let renderComponent;
+  // export let renderComponent;
   export let onClose = function() {};
 
   function onModalClose(event) {
@@ -12,7 +12,7 @@
 <style>
   .modal-container {
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(255, 255, 255, 0.3);
     display: flex;
     height: 100vh;
     justify-content: center;
@@ -30,15 +30,41 @@
     max-height: 100vh;
     max-width: 100vw;
     position: absolute;
-    /* temp */
-    background-color: white;
-    width: 100px;
-    height: 100px;
+    height: 90vh;
+    width: 95vw;
+  }
+
+  @media (min-width: 576px) {
+    .modal {
+      height: 90vh;
+      width: 85vw;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .modal {
+      height: 85vh;
+      width: 75vw;
+    }
+  }
+
+  @media (min-width: 992px) {
+    .modal {
+      height: 85vh;
+      width: 70vw;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .modal {
+      height: 85vh;
+      width: 65vw;
+    }
   }
 </style>
 
 <div class="modal-container" on:click={onModalClose}>
   <div class="modal">
-    <div>...</div>
+    <slot />
   </div>
 </div>

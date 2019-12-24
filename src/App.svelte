@@ -2,9 +2,27 @@
   import Modal from './components/generic/Modal.svelte';
   import Resume from './components/Resume.svelte';
 
-  let showResume = true;
+  let showResume = false;
+  function checkToOpenResume() {
+    if (window.location.hash.toLowerCase() === '#resume') {
+      showResume = true;
+    }
+    // window.ga('send', {
+    //   hitType: 'event',
+    //   eventCategory: 'Resume',
+    //   eventAction: 'open',
+    // });
+  }
+  window.onhashchange = checkToOpenResume;
+  checkToOpenResume();
+
   function closeResumeModal() {
     showResume = false;
+    history.pushState(
+      '',
+      document.title,
+      window.location.pathname + window.location.search,
+    );
   }
 </script>
 
@@ -30,9 +48,16 @@
     color: rgb(138, 180, 248);
     text-decoration: none;
   }
+
+  footer {
+    margin-top: auto;
+  }
 </style>
 
-<div class="App fx-container direction-column align-center justify-center">
+<div
+  itemscope
+  itemtype="https://schema.org/Person"
+  class="App fx-container direction-column align-center">
   <div class="fx-item fx-grow-zero">
     <img id="profile-pic" src="/public/vatsal-joshi.png" alt="Vatsal Joshi" />
   </div>
@@ -54,10 +79,25 @@
       </a>
     </p>
   </div>
+  <footer class="fx-item fx-grow-zero">
+    <p>
+      Site build with
+      <a href="https://svelte.dev">Svelte</a>
+    </p>
+    <p>
+      Source code can be found at
+      <a
+        target="_blank"
+        href="https://github.com/vatz88/vatz88.github.io"
+        rel="noopener">
+        github.com/vatz88/vatz88.github.io
+      </a>
+    </p>
+  </footer>
 </div>
 
 {#if showResume}
   <Modal onClose={closeResumeModal}>
-    <Resume />
+    <Resume onClose={closeResumeModal} />
   </Modal>
 {/if}

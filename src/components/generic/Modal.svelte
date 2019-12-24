@@ -1,5 +1,4 @@
 <script>
-  // export let renderComponent;
   export let onClose = function() {};
 
   function onModalClose(event) {

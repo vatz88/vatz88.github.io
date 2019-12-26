@@ -6,12 +6,10 @@
   function checkToOpenResume() {
     if (window.location.hash.toLowerCase() === '#resume') {
       showResume = true;
+      gtag('event', 'resume view', {
+        non_interaction: true,
+      });
     }
-    // window.ga('send', {
-    //   hitType: 'event',
-    //   eventCategory: 'Resume',
-    //   eventAction: 'open',
-    // });
   }
   window.onhashchange = checkToOpenResume;
   checkToOpenResume();

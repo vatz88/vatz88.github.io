@@ -50,7 +50,12 @@ function getWebpackConfig(env) {
         {
           test: /\.(svelte)$/,
           exclude: /node_modules/,
-          use: 'svelte-loader',
+          use: {
+            loader: 'svelte-loader',
+            options: {
+              emitCss: true,
+            },
+          },
         },
         {
           test: /\.(css|scss|sass)$/,

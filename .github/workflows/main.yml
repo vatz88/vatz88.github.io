@@ -28,7 +28,7 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add .
-          git commit -m '📦 Build' --no-verify
+          git commit -m '📦 Build' --no-verify --allow-empty
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:

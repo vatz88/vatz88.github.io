@@ -30,7 +30,7 @@
     cursor: pointer;
     margin: 0 0.5rem;
     color: #f5deb3;
-    /* Safari */
+    /* Safari fix */
     -webkit-text-fill-color: #f5deb3;
     font-size: 12px;
     font-family: sans-serif;

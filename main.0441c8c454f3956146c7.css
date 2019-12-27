@@ -1,4 +1,0 @@
-.fx-container{display:-webkit-box;display:flex}.fx-container.direction-column{-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column}.fx-container.align-center{-webkit-box-align:center;align-items:center}.fx-container.justify-center{-webkit-box-pack:center;justify-content:center}.fx-container>.fx-item{-webkit-box-flex:1;flex:1}.fx-container>.fx-item.fx-grow-zero{-webkit-box-flex:0;flex-grow:0}*{box-sizing:border-box}html,body{margin:0;padding:0}body{height:100vh;min-height:400px}
-
-
-/*# sourceMappingURL=main.0441c8c454f3956146c7.css.map*/

@@ -2,7 +2,10 @@ const path = require('path');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const TerserJSPlugin = require('terser-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const SizePlugin = require('size-plugin');
 
 function getWebpackConfig(env) {
   const isProdcution = env === 'production' ? true : false;
@@ -32,6 +35,9 @@ function getWebpackConfig(env) {
     devtool: isProdcution ? 'source-map' : 'inline-source-map',
     devServer: {
       contentBase: './',
+    },
+    optimization: {
+      minimizer: [new TerserJSPlugin({}), new OptimizeCSSAssetsPlugin({})],
     },
     module: {
       rules: [
@@ -96,6 +102,9 @@ function getWebpackConfig(env) {
       new HtmlWebpackPlugin({
         filename: 'index.html',
         template: path.resolve(__dirname, 'src/template.html'),
+      }),
+      new SizePlugin({
+        pattern: 'main.*.{js,css}',
       }),
     ].filter(Boolean),
   };

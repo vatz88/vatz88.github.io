@@ -103,9 +103,10 @@ function getWebpackConfig(env) {
         filename: 'index.html',
         template: path.resolve(__dirname, 'src/template.html'),
       }),
-      new SizePlugin({
-        pattern: 'main.*.{js,css}',
-      }),
+      isProdcution &&
+        new SizePlugin({
+          pattern: 'main.*.{js,css}',
+        }),
     ].filter(Boolean),
   };
 }

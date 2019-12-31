@@ -1,4 +1,6 @@
 <script>
+  import { theme } from '../../stores/theme-store';
+
   export let onClose = function() {};
 
   function onModalClose(event) {
@@ -11,7 +13,6 @@
 <style>
   .modal-container {
     align-items: center;
-    background-color: rgba(255, 255, 255, 0.3);
     display: flex;
     height: 100vh;
     justify-content: center;
@@ -62,7 +63,7 @@
   }
 </style>
 
-<div class="modal-container" on:click={onModalClose}>
+<div class={`modal-container ${$theme}`} on:click={onModalClose}>
   <div class="modal">
     <slot />
   </div>

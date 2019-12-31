@@ -1,0 +1,24 @@
+.dark {
+  &.App {
+    background-color: rgb(50, 54, 57);
+    color: rgb(232, 234, 237);
+
+    a {
+      color: rgb(138, 180, 248);
+    }
+  }
+
+  &.modal-container {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+
+  .resume-action-buttons {
+    background-color: #333;
+
+    .resume-action-btn {
+      color: #f5deb3;
+      /* Safari fix */
+      -webkit-text-fill-color: #f5deb3;
+    }
+  }
+}

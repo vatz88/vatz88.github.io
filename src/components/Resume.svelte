@@ -4,7 +4,7 @@
   function onDownloadResume() {
     window.location =
       'https://docs.google.com/document/d/17SJXhb048iAt1bTxOR14O4VyAuik6nuqgC3-W1Sl740/export?format=pdf';
-      gtag('event', 'resume download');
+    gtag('event', 'resume download');
   }
 </script>
 
@@ -20,7 +20,6 @@
   }
 
   .resume-action-buttons {
-    background-color: #333;
     padding: 1rem;
     justify-content: flex-end;
   }
@@ -29,9 +28,6 @@
     all: unset;
     cursor: pointer;
     margin: 0 0.5rem;
-    color: #f5deb3;
-    /* Safari fix */
-    -webkit-text-fill-color: #f5deb3;
     font-size: 12px;
     font-family: sans-serif;
     text-transform: uppercase;

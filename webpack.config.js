@@ -4,7 +4,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const TerserJSPlugin = require('terser-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const SizePlugin = require('size-plugin');
 
 function getWebpackConfig(env) {
@@ -37,7 +36,7 @@ function getWebpackConfig(env) {
       contentBase: './',
     },
     optimization: {
-      minimizer: [new TerserJSPlugin({}), new OptimizeCSSAssetsPlugin({})],
+      minimizer: [new TerserJSPlugin({})],
     },
     module: {
       rules: [

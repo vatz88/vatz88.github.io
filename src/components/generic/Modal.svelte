@@ -30,13 +30,13 @@
     max-height: 100vh;
     max-width: 100vw;
     position: absolute;
-    height: 90vh;
+    height: 80vh;
     width: 95vw;
   }
 
   @media (min-width: 576px) {
     .modal {
-      height: 90vh;
+      height: 85vh;
       width: 85vw;
     }
   }

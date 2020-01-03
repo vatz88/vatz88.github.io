@@ -24,6 +24,10 @@
     animation: ripple 2s linear 2;
     /* animation starts after a delay of 3s */
     animation-delay: 3s;
+    /* Safari fix
+     * It needs the animated property defined in default styling
+     */
+    border: 1px solid rgba(#dbdce0, 0);
     border-radius: 50%;
     content: '';
     height: 150px;

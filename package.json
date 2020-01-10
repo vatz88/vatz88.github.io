@@ -5,6 +5,7 @@
   "scripts": {
     "start": "webpack-dev-server",
     "start:open": "npm start -- --open",
+    "start:local": "npm start -- --host 0.0.0.0",
     "build": "cross-env NODE_ENV=production webpack",
     "analyze": "source-map-explorer main.*.js",
     "test": "echo \"Error: no test specified\" && exit 1"

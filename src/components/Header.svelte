@@ -2,7 +2,7 @@
   import { THEMES, theme } from '../stores/theme-store';
 
   function toggleTheme() {
-    window.navigator.vibrate && window.navigator.vibrate(200);
+    window.navigator.vibrate && window.navigator.vibrate(50);
     theme.update(currentTheme => {
       return currentTheme === THEMES.dark ? THEMES.light : THEMES.dark;
     });

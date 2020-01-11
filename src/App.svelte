@@ -39,7 +39,7 @@
 <div
   itemscope
   itemtype="https://schema.org/Person"
-  class={`App fx-container direction-column align-center ${$theme}`}>
+  class="App fx-container direction-column align-center {$theme}">
   <Header />
   <Main />
   <Footer />

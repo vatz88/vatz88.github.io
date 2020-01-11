@@ -13,6 +13,8 @@
     y: 0,
   };
 
+  let orientationRotateValue = 0;
+
   function setPicRotateValue(key, val) {
     picRotateValue = {
       ...picRotateValue,
@@ -21,10 +23,6 @@
   }
 
   function animatePic(newX, newY) {
-    // function animatePic(x, y) {
-    // const newX = Math.sign(x) * Math.min(Math.sign(x) * x, 40);
-    // const newY = Math.sign(y) * Math.min(Math.sign(y) * y, 40);
-
     const intervalId = {};
 
     function setCoordinateValue(key, val) {
@@ -32,8 +30,6 @@
       setPicRotateValue(key, val);
       intervalId[key] = window.setTimeout(() => {
         if (picRotateValue[key] !== 0) {
-          // const reduceNum = Math.sign(picRotateValue[key]);
-          // setCoordinateValue(key, val - reduceNum);
           setPicRotateValue(key, 0);
         } else {
           window.clearTimeout(intervalId[key]);
@@ -70,8 +66,11 @@
   if (!hasReducedMotionEnabled) {
     if (supportsMouse) {
       window.document.addEventListener('mousemove', function(event) {
-        // animatePic(event.movementY * 8, event.movementX * 8);
         animatePic(event.movementY * 2, event.movementX * 2);
+      });
+    } else if (window.DeviceOrientationEvent) {
+      window.addEventListener('deviceorientation', function(event) {
+        orientationRotateValue = -event.gamma;
       });
     }
   }
@@ -124,7 +123,8 @@
     id="profile-pic"
     src="/public/vatsal-joshi.png"
     alt="Vatsal Joshi"
-    style="transform: rotateX({picRotateValue.x}deg) rotateY({picRotateValue.y}deg)" />
+    style="transform: rotate({orientationRotateValue}deg) rotateX({picRotateValue.x}deg)
+    rotateY({picRotateValue.y}deg)" />
 </div>
 <div class="fx-item fx-grow-zero">
   <h1>Vatsal Joshi</h1>

@@ -4,7 +4,7 @@
   function onDownloadResume() {
     window.location =
       'https://docs.google.com/document/d/17SJXhb048iAt1bTxOR14O4VyAuik6nuqgC3-W1Sl740/export?format=pdf';
-    gtag('event', 'resume download');
+    window.gtag('event', 'resume download');
   }
 </script>
 

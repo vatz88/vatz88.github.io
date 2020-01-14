@@ -10,7 +10,7 @@
   function checkToOpenResume() {
     if (window.location.hash.toLowerCase() === '#resume') {
       showResume = true;
-      gtag('event', 'resume view', {
+      window.gtag('event', 'resume view', {
         non_interaction: true,
       });
     }

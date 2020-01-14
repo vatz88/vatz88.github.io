@@ -6,6 +6,7 @@
     theme.update(currentTheme => {
       return currentTheme === THEMES.dark ? THEMES.light : THEMES.dark;
     });
+    window.gtag('event', 'resume download');
   }
 
   let picRotateValue = {

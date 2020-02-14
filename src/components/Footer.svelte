@@ -5,12 +5,12 @@
 </style>
 
 <footer class="fx-item fx-grow-zero">
-  <p>
+  <!-- <p>
     Site build with
     <a href="https://svelte.dev">Svelte</a>
-  </p>
+  </p> -->
   <p>
-    Source code can be found at
+    Liked this site? Source code available at
     <a
       target="_blank"
       href="https://github.com/vatz88/vatz88.github.io"

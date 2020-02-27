@@ -1,13 +1,13 @@
 <div class="fx-item fx-grow-zero">
   <p>I'm a JavaScript and Web enthusiast.</p>
   <p>
-    A pseudo blogger at
+    A (pseudo) blogger at
     <a target="_blank" href="https://blog.vatz88.in" rel="noopener">
       blog.vatz88.in
     </a>
   </p>
   <p>
-    When free, I contribute on
+    Sometimes contribute on
     <a
       target="_blank"
       href="https://stackoverflow.com/users/5733059/vatz88"

@@ -43,7 +43,7 @@ function getWebpackConfig(env) {
         {
           test: /\.(svelte|m?js)$/,
           // not excluding node_modules to support old safari version
-          // excluding node_modules includes add use of `const` in production code
+          // excluding node_modules, adds use of `const` in production code
           // exclude: /node_modules/,
           // include: /node_modules\/svelte/,
           use: {

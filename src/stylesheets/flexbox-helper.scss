@@ -14,9 +14,7 @@
   }
 
   > .fx-item {
-    // flex: 1;
-    // safari v9.1.2 does not take default value
-    flex: 0 1 auto;
+    flex: 1;
 
     &.fx-grow-zero {
       flex-grow: 0;

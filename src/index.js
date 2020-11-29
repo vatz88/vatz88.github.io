@@ -8,8 +8,7 @@ const app = new App({
 
 const consolestyles = fontSize =>
   [`font-size: ${fontSize}px`, 'color: #757575'].join(';');
-console.log('%cvatz88', consolestyles(44));
 console.log(
-  '%cDid you know you can toggle the theme? Click on my photo!',
-  consolestyles(22),
+  `%cWell, there's nothing hidden here but if you haven't figured it out yet, you can toggle theme by clicking on my face.`,
+  consolestyles(24),
 );

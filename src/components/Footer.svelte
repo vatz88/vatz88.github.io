@@ -10,7 +10,7 @@
     <a href="https://svelte.dev">Svelte</a>
   </p> -->
   <p>
-    Liked this site? Source code available at
+    There are no copyrights. Source code at
     <a
       target="_blank"
       href="https://github.com/vatz88/vatz88.github.io"

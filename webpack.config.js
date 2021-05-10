@@ -1,10 +1,10 @@
 const path = require('path');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+// const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const TerserJSPlugin = require('terser-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const SizePlugin = require('size-plugin');
+// const SizePlugin = require('size-plugin');
 
 function getWebpackConfig(env) {
   const isProdcution = env === 'production' ? true : false;
@@ -29,11 +29,11 @@ function getWebpackConfig(env) {
     entry: path.resolve(__dirname, 'src/index.js'),
     output: {
       filename: isProdcution ? '[name].[contenthash].js' : '[name].js',
-      path: path.resolve(__dirname, '.'),
+      path: path.resolve(__dirname, './dist'),
     },
     devtool: isProdcution ? 'source-map' : 'inline-source-map',
     devServer: {
-      contentBase: './',
+      contentBase: path.resolve(__dirname, './dist'),
     },
     optimization: {
       minimizer: [new TerserJSPlugin({})],
@@ -83,17 +83,17 @@ function getWebpackConfig(env) {
       ],
     },
     plugins: [
-      isProdcution &&
-        new CleanWebpackPlugin({
-          // dry: true,
-          cleanOnceBeforeBuildPatterns: [
-            'index.html',
-            'main.*.css',
-            'main.*.css.map',
-            'main.*.js',
-            'main.*.js.map',
-          ],
-        }),
+      // isProdcution &&
+      //   new CleanWebpackPlugin({
+      //     // dry: true,
+      //     cleanOnceBeforeBuildPatterns: [
+      //       'index.html',
+      //       'main.*.css',
+      //       'main.*.css.map',
+      //       'main.*.js',
+      //       'main.*.js.map',
+      //     ],
+      //   }),
       new MiniCssExtractPlugin({
         filename: isProdcution ? '[name].[contenthash].css' : '[name].css',
         chunkFilename: isProdcution
@@ -102,12 +102,12 @@ function getWebpackConfig(env) {
       }),
       new HtmlWebpackPlugin({
         filename: 'index.html',
-        template: path.resolve(__dirname, 'src/template.html'),
+        template: path.resolve(__dirname, 'src/index.html'),
       }),
-      isProdcution &&
-        new SizePlugin({
-          pattern: 'main.*.{js,css}',
-        }),
+      // isProdcution &&
+      //   new SizePlugin({
+      //     pattern: 'main.*.{js,css}',
+      //   }),
     ].filter(Boolean),
   };
 }

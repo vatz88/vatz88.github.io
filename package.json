@@ -1,13 +1,13 @@
 {
   "name": "vatz88.github.io",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Home page for vatz88.in",
   "scripts": {
     "start": "webpack-dev-server",
     "start:open": "npm start -- --open",
     "start:local": "npm start -- --https --host 0.0.0.0",
     "build": "cross-env NODE_ENV=production webpack",
-    "analyze": "source-map-explorer main.*.js",
+    "analyze": "source-map-explorer dist/main.*.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "husky": {

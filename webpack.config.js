@@ -1,4 +1,11 @@
+const crypto = require('crypto');
 const path = require('path');
+
+// Webpack 4 / terser-webpack-plugin still request MD4, which OpenSSL 3
+// (Node 17+) rejects. SHA-256 is a compatible stand-in for cache keys.
+const createHash = crypto.createHash;
+crypto.createHash = algorithm =>
+  createHash(algorithm === 'md4' ? 'sha256' : algorithm);
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 // const { CleanWebpackPlugin } = require('clean-webpack-plugin');
@@ -21,7 +28,15 @@ function getWebpackConfig(env) {
       options: { importLoaders: 1 },
     },
     'postcss-loader',
-    'sass-loader',
+    {
+      loader: 'sass-loader',
+      options: {
+        implementation: require('sass'),
+        sassOptions: {
+          silenceDeprecations: ['legacy-js-api', 'import'],
+        },
+      },
+    },
   ].filter(Boolean);
 
   return {
